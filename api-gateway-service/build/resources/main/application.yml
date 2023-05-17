@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888 # -> config-server-git'ın yayın yaptıgı port ${configserver_uri}
+  config:
+    import: "configserver:"
+  application:
+    name: api-gateway-service-application

@@ -1,0 +1,21 @@
+server:
+  port: 8889
+
+spring:
+  application:
+    name: config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/suayipgurnaz/java6ConfigServer.git # ${java6configuri} -> github'da olusturdugumuz repository'nin linki
+          default-label: main # github'daki branch'i master da olusturduysak burası master olacak
+          skip-ssl-validation: true
+          username: suayipgurnaz # ${java6configusername} -> github kullanici adi
+          password: ${java6configpasswordr}  # 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 -> github'da olusturdugumuz access token
+
+#  zipkin:
+#    enabled: true
+#    base-url: ${zipkin_url}
+#    service:
+#      name: config-server-git
